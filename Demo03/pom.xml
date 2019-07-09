@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bw</groupId>
+  <artifactId>Demo03</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+   	<dependencies>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-webmvc</artifactId>
+  		<version>4.2.4.RELEASE</version>
+  	</dependency>
+  	
+  	
+  
+  
+  </dependencies>
+  <distributionManagement>
+  	<repository>
+  		<id>releases</id>
+  		<url>http://localhost:8081/nexus/content/repositories/releases/</url>
+  	</repository>
+  	<snapshotRepository>
+  		<id>snapshots</id>
+  		<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+  	</snapshotRepository>
+  </distributionManagement>
+  
+  
+  
+  	
+    <build>
+		<plugins>
+			<!-- 编译插件： 覆盖Maven的编译插件，设置编译级别为1.8 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+			</plugin>
+				<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
+		</plugins>		
+	</build>
+</project>
